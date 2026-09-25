@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aroja\\OneDrive\\Escritorio\\BYUI\\.NET (Fall 2026)\\Week 1\\DotNetDebugging\\DotNetDebugging.csproj",
+      "projectUniqueName": "C:\\Users\\aroja\\OneDrive\\Escritorio\\BYUI\\.NET (Fall 2026)\\CSE325_Project\\Week 1\\DotNetDebugging\\DotNetDebugging.csproj",
       "projectName": "DotNetDebugging",
-      "projectPath": "C:\\Users\\aroja\\OneDrive\\Escritorio\\BYUI\\.NET (Fall 2026)\\Week 1\\DotNetDebugging\\DotNetDebugging.csproj",
+      "projectPath": "C:\\Users\\aroja\\OneDrive\\Escritorio\\BYUI\\.NET (Fall 2026)\\CSE325_Project\\Week 1\\DotNetDebugging\\DotNetDebugging.csproj",
       "packagesPath": "C:\\Users\\aroja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aroja\\OneDrive\\Escritorio\\BYUI\\.NET (Fall 2026)\\Week 1\\DotNetDebugging\\obj\\",
+      "outputPath": "C:\\Users\\aroja\\OneDrive\\Escritorio\\BYUI\\.NET (Fall 2026)\\CSE325_Project\\Week 1\\DotNetDebugging\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aroja\\AppData\\Roaming\\NuGet\\NuGet.Config"

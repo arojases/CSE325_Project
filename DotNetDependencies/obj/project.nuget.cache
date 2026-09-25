@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VQ7HUZd26BY=",
+  "dgSpecHash": "EFvRB01hRKU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\aroja\\OneDrive\\Escritorio\\BYUI\\.NET (Fall 2026)\\Week 1\\DotNetDependencies\\DotNetDependencies.csproj",
+  "projectFilePath": "C:\\Users\\aroja\\OneDrive\\Escritorio\\BYUI\\.NET (Fall 2026)\\CSE325_Project\\Week 1\\DotNetDependencies\\DotNetDependencies.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aroja\\.nuget\\packages\\humanizer\\3.0.10\\humanizer.3.0.10.nupkg.sha512",
     "C:\\Users\\aroja\\.nuget\\packages\\humanizer.core\\3.0.10\\humanizer.core.3.0.10.nupkg.sha512",
