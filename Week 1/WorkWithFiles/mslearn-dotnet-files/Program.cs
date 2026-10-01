@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using System.Text;
 
 var currentDirectory = Directory.GetCurrentDirectory();
 var storesDirectory = Path.Combine(currentDirectory, "stores");
@@ -13,7 +14,8 @@ var salesTotal = CalculateSalesTotal(salesFiles); // Add this line of code
 
 File.AppendAllText(Path.Combine(salesTotalDir, "totals.txt"), $"{salesTotal}{Environment.NewLine}");
 
-
+//Generate the final report
+GenerateReport(salesFiles, salesTotalDir, salesTotal);
 
 IEnumerable<string> FindFiles(string folderName)
 {
@@ -53,4 +55,61 @@ double CalculateSalesTotal(IEnumerable<string> salesFiles)
 
     return salesTotal;
 }
-record SalesData(double Total);
+
+void GenerateReport(IEnumerable<string> salesFiles, string salesTotalDir, double salesTotal)
+{
+    //creates StringBuilder to buuild the report line by line
+    StringBuilder report = new StringBuilder();
+
+    report.AppendLine("Sales Summary Report");
+    report.AppendLine("====================");
+    report.AppendLine("");
+
+    report.AppendLine($"Total Sales: {salesTotal:C}");
+    report.AppendLine("");
+
+    report.AppendLine("Details:");
+
+    //loop each sales files found
+    foreach (var file in salesFiles)
+    {
+        // Read the contents of the current JSON file
+        string salesJson = File.ReadAllText(file);
+
+        //get only the folder and the file name
+        var folder = Path.GetFileName(Path.GetDirectoryName(file));
+        var filename = Path.GetFileName(file);
+
+        //chheck the file if is salestotal.json // I did this because I didnt know if we supouse to take both files or just the sales.json
+        if (filename == "salestotals.json")
+        {
+            SalesData? data =
+                JsonConvert.DeserializeObject<SalesData?>(salesJson);
+
+            double fileOverallTotal = data?.OverallTotal ?? 0;
+
+            report.AppendLine(
+                $"{folder}/{filename}: - Overall Total: {fileOverallTotal:C}"
+            );
+        }
+        else
+        {
+            SalesData? data =
+                JsonConvert.DeserializeObject<SalesData?>(salesJson);
+
+            double fileTotal = data?.Total ?? 0;
+
+            report.AppendLine(
+                $"{folder}/{filename}: - Total: {fileTotal:C}"
+            );
+        }
+    }
+
+    //creates the full path for the report file
+    var reportFilePath = Path.Combine(salesTotalDir, "SalesReport.txt");
+    //Write the report to the file
+    File.WriteAllText(reportFilePath, report.ToString());
+
+}
+
+record SalesData(double Total, double OverallTotal);

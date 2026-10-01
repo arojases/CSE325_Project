@@ -1,0 +1,15 @@
+Sales Summary Report
+====================
+
+Total Sales: $2,012.20
+
+Details:
+stores/sales.json: - Total: $88.88
+201/sales.json: - Total: $501.22
+201/salestotals.json: - Overall Total: $1,501.22
+202/sales.json: - Total: $1,234.22
+202/salestotals.json: - Overall Total: $101.22
+203/sales.json: - Total: $99.00
+203/salestotals.json: - Overall Total: $154,401.22
+204/sales.json: - Total: $88.88
+204/salestotals.json: - Overall Total: $13,501.22

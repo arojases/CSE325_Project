@@ -1,0 +1,36 @@
+@CostosoPizza_HostAddress = http://localhost:5214
+
+GET {{CostosoPizza_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{CostosoPizza_HostAddress}}/pizza/
+Accept: application/json
+
+###
+
+POST {{CostosoPizza_HostAddress}}/pizza/
+Content-Type: application/json
+
+{
+    "name": "Extra Pepperoni",
+    "isGlutenFree": false
+}
+
+###
+
+PUT {{CostosoPizza_HostAddress}}/pizza/3
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "Super Extra Pepperoni",
+    "isGlutenFree": false
+}
+
+###
+
+DELETE {{CostosoPizza_HostAddress}}/pizza/3
+
+###
