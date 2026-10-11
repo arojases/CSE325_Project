@@ -51,7 +51,7 @@ namespace MvcMovie.Controllers
 
             if (SearchYear.HasValue)
             {
-                movies = movies.Where(x => x.ReleaseDate.Year <= SearchYear.Value);;
+                movies = movies.Where(x => x.ReleaseDate.Year >= SearchYear.Value);;
             }
 
             //order by release Date
